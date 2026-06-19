@@ -29,38 +29,18 @@ body{
 <body>
 
 <div id="vt">
-    <center>
-        <div>VirusTotal API</div>
-        <div class="score" id="score">...</div>
-    </center>
 </div>
 
 <script>
 const HASH = "be770d05e341b14cac01a93411deab5a5cb42fc0388e904a8bf7a3427bcf232b";
 const API_KEY = "2dc9b35f9c0ac0fc8dbf4cff026894848e9324c3bfbddcf50643a2e8ca4189e2";
 
-fetch(`https://www.virustotal.com/api/v3/files/${HASH}`, {
-    headers: {
-        "x-apikey": API_KEY
-    }
-})
-.then(r => r.json())
-.then(data => {
-    const stats = data.data.attributes.last_analysis_stats;
-    const malicious = stats.malicious || 0;
+const options = {method: 'GET', headers: {accept: 'application/json', 'x-apikey': API_KEY}};
 
-    const total =
-    (stats.harmless || 0) +
-    (stats.malicious || 0) +
-    (stats.suspicious || 0) +
-    (stats.undetected || 0);
-
-    document.getElementById("score").textContent =
-        `${malicious}/${total}`;
-})
-.catch(() => {
-    document.getElementById("score").textContent = "Ошибка";
-});
+fetch('https://virustotal.com/ui/widget/html/'+HASH, options)
+  .then(res => res.json())
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
 </script>
 
 </body>
