@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Pack - Launcher</title>
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f4;
+            color: #202124;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        .header {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .info-link {
+            padding: 8px 16px;
+            background-color: #fff;
+            color: #d93025;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            border: 1px solid #dadce0;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        .info-link:hover {
+            background-color: #fce8e6;
+            border-color: #fad2cf;
+        }
+        .banner-message {
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 12px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 40px;
+            box-sizing: border-box;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            margin-bottom: 60px;
+        }
+        .vt-box {
+            max-width: 500px;
+            background-color: #e8f0fe;
+            border: 1px solid #d2e3fc;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #1967d2;
+        }
+        .vt-link {
+            color: #1a73e8;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .vt-link:hover {
+            color: #1557b0;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(26, 115, 232, 0.2);
+            transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .download-btn:hover {
+            background-color: #1557b0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(26, 115, 232, 0.3);
+        }
+        .download-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo-title">🚀 Google Pack</div>
+        <a class="info-link" href="Info.html">⚠️ Build Info</a>
+    </div>
+
+    <div class="banner-message">
+        Please make sure to visit the "Build Info" tab before downloading or using this software!
+    </div>
+
+    <div class="main-content">
+        <!-- New VirusTotal report notice block -->
+        <div class="vt-box">
+            This file is completely safe and non-malicious. Fake detections or false positives can sometimes occur on VirusTotal for new, unsigned software. <br><br>
+            🔍 <a class="vt-link" href="https://www.virustotal.com/gui/file/be770d05e341b14cac01a93411deab5a5cb42fc0388e904a8bf7a3427bcf232b" target="_blank">View Official VirusTotal Scan Report</a>
+        </div>
+
+        <a class="download-btn" href="https://drive.usercontent.google.com/download?id=1HbAjbrRe4b-z1SvR30rbihlZJTEHOaxP&export=download&authuser=0&confirm=t&uuid=000d1f1d-930a-4bc4-8f29-a637c8b14181&at=AAINaIJSpmp1QnJ4AuZKAvceHJg3%3A1781850281297">
+            Download Setup File
+        </a>
+        <br>
+        <br>
+        <iframe src="virus_score.html" frameborder="0" width="150px" height="150px"></iframe>
+    </div>
+
+</body>
+</html>
